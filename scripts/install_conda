@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+echo "Creating conda environment"
+conda create --name teach-env python=3.9
+echo "Activating conda environment"
+conda activate teach-env
+echo "This is the path of the pip we are using:"
+which pip
+echo "installing packages"
+pip install --upgrade pip setuptools
+pip install torch==1.11.0 torchmetrics==0.7.2 torchvision==0.12.0 numpy==1.22.3
+pip install -r ../requirements.txt
